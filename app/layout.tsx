@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        media: "(prefers-color-schema): light",
+        media: "(prefers-color-scheme: light)",
         url: "/logo.svg",
         href: "/logo.svg"
       },
       {
-        media: "(prefers-color-schema): dark",
+        media: "(prefers-color-scheme: dark)",
         url: "/logo-dark.svg",
         href: "/logo-dark.svg"
       }
@@ -40,8 +40,8 @@ export default function RootLayout({
           storageKey="jotion-theme-2">
           {children}
         </ThemeProvider>
+        <link rel="shortcut icon" href="/logo.s" />
       </body>
-      <link rel="icons" href="/favicon.ico" />
     </html>
   );
 }
