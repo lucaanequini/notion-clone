@@ -5,6 +5,7 @@ import { useMediaQuery } from "usehooks-ts"
 import { UserItem } from "./user-item"
 import { Item } from "./item"
 import { DocumentList } from "./document-list"
+import { useSearch } from "@/hooks/use-search"
 
 import { cn } from "@/lib/utils"
 import { useMutation } from "convex/react"
@@ -15,6 +16,7 @@ import { Popover, PopoverTrigger, PopoverContent } from "@radix-ui/react-popover
 import { TrashBox } from "./trash-box"
 
 export const Navigation = () => {
+    const search = useSearch()
     const pathName = usePathname()
     const isMobile = useMediaQuery('(max-width: 768px')
 
@@ -133,7 +135,7 @@ export const Navigation = () => {
                         label="Search"
                         icon={Search}
                         isSearch
-                        onClick={() => { }}
+                        onClick={search.onOpen}
                     />
                     <Item
                         label="Settings"
