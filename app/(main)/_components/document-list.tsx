@@ -60,6 +60,7 @@ export const DocumentList = ({ parentDocumentId, level = 0 }: DocumentListProps)
                     expanded && 'last:block',
                     level === 0 && 'hidden'
                 )}>
+                No pages inside
             </p>
             {documents.map((document) => (
                 <div key={document._id}>
