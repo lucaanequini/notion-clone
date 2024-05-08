@@ -34,8 +34,14 @@ const Editor = ({ onChange, initialContent, editable }: EditorProps) => {
     });
 
     const onSave = () => {
-        setBlocks(editor.document)
-        onChange(JSON.stringify(blocks, null, 2))
+        if (blocks === editor.document) {
+            console.log(blocks)
+            console.log(editor.document)
+            return
+        } else {
+            setBlocks(editor.document)
+            onChange(JSON.stringify(blocks, null, 2))
+        }
     }
 
     return (
