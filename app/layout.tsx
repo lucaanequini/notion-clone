@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} dark:bg-[#1f1f1f]`}>
         <ConvexClientProvider>
           <EdgeStoreProvider>
             <ThemeProvider
@@ -55,6 +55,6 @@ export default function RootLayout({
         </ConvexClientProvider>
         <link rel="shortcut icon" href="/logo.s" />
       </body>
-    </html>
+    </html >
   );
 }
