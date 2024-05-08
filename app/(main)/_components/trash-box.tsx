@@ -61,7 +61,7 @@ export const TrashBox = () => {
     }
 
     return (
-        <div className="text-sm">
+        <div className="text-sm bg-white border rounded">
             <div className="flex items-center gap-x-1 p-2">
                 <Search className="h-4 w-4" />
                 <Input
